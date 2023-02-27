@@ -1,0 +1,44 @@
+.taskForm {
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: -1.75rem;
+  height: 54px;
+}
+
+.taskForm input[type=text] {
+  height: 54px;
+  width: 638px;
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  background: var(--gray-500);
+  padding: 16px;
+  color: var(--gray-100);
+  font-weight: 400;
+  outline: none;
+}
+
+.taskForm input::placeholder {
+  color: var(--gray-300);
+  line-height: 140%;
+  font-style: normal;
+}
+
+.taskForm button[type=submit] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-dark);
+  border: 0;
+  border-radius: 8px;
+  color: var(--gray-100);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px;
+  height: 100%;
+  width: 90px;
+  gap: 8px;
+}
