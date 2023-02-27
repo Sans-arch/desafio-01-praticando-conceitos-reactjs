@@ -1,8 +1,9 @@
+import { Header } from './components/Header';
 import './global.css';
 
 function App() {
   return (
-    <h1>Sim</h1>
+    <Header />
   )
 }
 
