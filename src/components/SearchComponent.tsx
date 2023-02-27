@@ -17,24 +17,27 @@ export function SearchComponent({ onAddTask }: SearchComponentProps) {
 
   function handleCreateTask(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    onAddTask({
-      id: Math.random(),
-      content: taskText,
-      isDone: false
-    });
+
+    if (taskText !== '') {
+      onAddTask({
+        id: Math.random(),
+        content: taskText,
+        isDone: false
+      });
+    }
 
     setTaskText("");
   }
 
   return (
     <form className={styles.taskForm} onSubmit={handleCreateTask}>
-      <input 
-        type="text" 
+      <input
+        type="text"
         placeholder="Adicione uma nova tarefa"
         value={taskText}
-        onChange={handleTaskText} 
+        onChange={handleTaskText}
       />
-      <button 
+      <button
         type="submit"
       >
         Criar
