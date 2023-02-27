@@ -8,7 +8,7 @@ export function SearchComponent() {
       <input type="text" placeholder='Adicione uma nova tarefa' />
       <button type="submit">
         Criar
-        <PlusCircle size={16} />
+        <PlusCircle size={18} />
       </button>
     </form>
   );
