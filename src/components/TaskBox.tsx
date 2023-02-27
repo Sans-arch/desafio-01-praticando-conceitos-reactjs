@@ -1,6 +1,7 @@
 import styles from './TaskBox.module.css';
 
-import clipboard from '../assets/clipboard.svg';
+import { Task } from './Task';
+import { EmptyTasks } from './EmptyTasks';
 
 export function TaskBox() {
   return (
@@ -9,11 +10,13 @@ export function TaskBox() {
         <p className={styles.createdTasks}>Tarefas criadas <span className={styles.counter}>0</span></p>
         <p className={styles.doneTasks}>Concluídas <span className={styles.counter}>0</span></p>
       </div>
-
-      <div className={styles.displayedTasks}>
-        <img src={clipboard} alt="Clipboard" />
-        <h2>Você ainda não tem tarefas cadastradas</h2>
-        <h3>Crie tarefas e organize seus itens a fazer</h3>
+ 
+      <div>
+        {/* <EmptyTasks /> */}
+        <Task />
+        <Task />
+        <Task />
+        <Task />
       </div>
     </div>
   );
