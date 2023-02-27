@@ -17,6 +17,11 @@
   margin-left: 10px;
 }
 
+.doneTask {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
 .task svg {
   color: var(--gray-300);
   transition: color 0.4s;

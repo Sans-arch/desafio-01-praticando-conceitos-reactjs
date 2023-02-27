@@ -1,10 +1,11 @@
 import { PlusCircle } from "phosphor-react";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { ITask } from "../App";
 
 import styles from "./SearchComponent.module.css";
 
 interface SearchComponentProps {
-  onAddTask: (task: string) => void;
+  onAddTask: (task: ITask) => void;
 }
 
 export function SearchComponent({ onAddTask }: SearchComponentProps) {
@@ -16,7 +17,12 @@ export function SearchComponent({ onAddTask }: SearchComponentProps) {
 
   function handleCreateTask(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    onAddTask(taskText);
+    onAddTask({
+      id: Math.random(),
+      content: taskText,
+      isDone: false
+    });
+
     setTaskText("");
   }
 
