@@ -19,6 +19,10 @@
   cursor: default;
 }
 
+.tasksCounter span {
+  margin-left: 4px;
+}
+
 .createdTasks {
   color: var(--blue);
 }
@@ -32,4 +36,38 @@
   background: var(--gray-400);
   padding: 2px 8px;
   border-radius: 999px;
+  font-size: 12px;
+}
+
+.displayedTasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 64px 24px;
+
+  /* border: 2px solid red; */
+  font-size: 16px;
+  color: var(--gray-300);
+}
+
+.displayedTasks img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+.displayedTasks h2, h3 {
+  line-height: 22.4px;
+}
+
+.displayedTasks h2 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.displayedTasks h3 {
+  font-weight: 400;
+  font-size: 19px;
 }
